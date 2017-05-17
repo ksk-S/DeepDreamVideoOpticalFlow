@@ -99,12 +99,14 @@ In that case, the image division will not be applied to the earlier stage of the
 
 
 # Examples
-
-- 1-extract.bat
+ 1-extract.bat
+ 
 `python dreamer.py -e 1 --input RHI-20Sec.mov --output Input
 
-- 2-dream.bat
+ 2-dream.bat
+
 `python dreamer.py --input Input --output Output --octaves 3 --octavescale 1.8 --iterations 16 --jitter 32 --zoom 1 --stepsize 1.5 --flow 1 --flowthresh 6 --blendflow 0.9 --blendstatic 0.1 --layers inception_4d/pool --gpu 1 -d 2 -mw 1500
 
-- 3-create.bat
+ 3-create.bat
+
 `python dreamer.py -c 1 --input Output --output Video.mp4
