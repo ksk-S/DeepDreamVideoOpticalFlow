@@ -1,6 +1,6 @@
 # DeepDreamVideoOpticalFlow
 
-# Use Optical Flow to Adjust Deep Dream Video
+## Use Optical Flow to Adjust Deep Dream Video
 
 he flow option enables the optical flow mode. This allows the optical flow of each frame to be calculated by comparing the difference in the movement of all pixels between the current and previous frame. The hallucinatory patterns on the area where the optical flow was detected is merged with the current (not-yet-hallucinatory) frame based on the weighting provided by the user defined blending ratio (0 = no information, 1 = all information). The blending ratio allows some of the hallucinatory content of the previous frame to be inherited from the previous frame, The Deep Dream algorithm is then applied to this merged frame, instead of Deep Dream starting from scratch for each frame. 
 
@@ -11,7 +11,7 @@ he flow option enables the optical flow mode. This allows the optical flow of ea
 The blending ratio on the optical flow area and the other areas (background) can be specified separately by using -bm and -bs options. The range of the blending ratio is between 0 and 1. A blending ratio of 1 means that the current frame inherits 100% of the hallucinatory content from the previous frame, and then the deep dream algorithm is applied. A blending ratio of 0 means the previous frame is dicarded, therefore the deep dream algorithm is applied from the scrach. 
 
 
-# Dividing the Image
+## Dividing the Image
 
 When using a GPU to process the deep dream algorithm, the maximum image size is capped by the video memory of your GPU.
 In order to process large images such as 4K resolution, it is neccersary to divide the input image into smaller sub-images inorder to apply Deep Dream.
@@ -30,8 +30,8 @@ In that case, the image division will not be applied to the earlier stage of the
 
 # Usage
 
-# Original Options:
-
+## Original Options:
+<pre>
  -h, --help            show this help message and exit
  -i INPUT, --input INPUT
                         Input directory where extracted frames are stored
@@ -67,9 +67,9 @@ In that case, the image division will not be applied to the earlier stage of the
                         layer
   -v VERBOSE, --verbose VERBOSE
                         verbosity [0-3]
-
-# Additional Options:
-
+</pre>
+## Additional Options:
+<pre>
    -flow, --flow	Optical Flow is taken into accout
    -flowthresh, --flowthresh
 			Threshold for detecting a flow
@@ -85,9 +85,9 @@ In that case, the image division will not be applied to the earlier stage of the
 			Maximum width to devide image
    -mh MAX_HEIGHT, --maxHeight MAX_HEIGHT
 			Maximum height to devide image (only used for the divide mode 1)
+</pre>
 
-
-# Requirements
+## Requirements
 
 - Python
 - Caffe (and other deepdream dependencies)
@@ -96,7 +96,7 @@ In that case, the image division will not be applied to the earlier stage of the
 
 
 
-# Examples
+## Examples
  1-extract.bat:
  
 `python dreamer.py -e 1 --input RHI-20Sec.mov --output Input`
