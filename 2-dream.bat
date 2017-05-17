@@ -1,0 +1,1 @@
+python dreamer.py --input Input --output Output --octaves 3 --octavescale 1.8 --iterations 16 --jitter 32 --zoom 1 --stepsize 1.5 --flow 1 --flowthresh 6 --blendflow 0.9 --blendstatic 0.05 --layers inception_4d/pool --gpu 1 -d 2 -mw 1500

@@ -1,0 +1,1 @@
+python dreamer.py -c 1 --input Output --output Video.mp4
