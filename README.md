@@ -22,11 +22,11 @@ When using a GPU to process the deep dream algorithm, the maximum image size is 
 In order to process large images such as 4K resolution, it is neccersary to divide the input image into smaller sub-images inorder to apply Deep Dream.
 -d or --divide option can be used to enable this function.
 
-` -d 0 : disable image division
+`-d 0 : disable image division
 
-` -d 1 : divide the image by MAX_WIDTH and MAX_HEIGHT of image specified by -mw and -mh options
+`-d 1 : divide the image by MAX_WIDTH and MAX_HEIGHT of image specified by -mw and -mh options
 
-` -d 2 : divide the image half when the width of the image is larger than MAX_WIDTH specified by -mw option
+`-d 2 : divide the image half when the width of the image is larger than MAX_WIDTH specified by -mw option
 
 
 The divided image is processed by Deep Dream individually and then merged into one.
