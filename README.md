@@ -1,8 +1,18 @@
 # DeepDreamVideoOpticalFlow
 
+Making a video based on [Deep Dream](https://github.com/google/deepdream).
+[DeepDreamAnim](https://github.com/samim23/DeepDreamAnim) and [Deepadsfadf
+
+This tool helps to create animations with [deepdream](https://github.com/google/deepdream).
+Extract frames from videos, process them with deepdream and then output as new video file.
+Frame blending option is provided, to ensure "stable" dreams across frames.
+A preview function make rapid iterations possible. Optionally guided dreaming & optical flow can be used.
+
+
+
 ## Use Optical Flow to Adjust Deep Dream Video
 
-he flow option enables the optical flow mode. This allows the optical flow of each frame to be calculated by comparing the difference in the movement of all pixels between the current and previous frame. The hallucinatory patterns on the area where the optical flow was detected is merged with the current (not-yet-hallucinatory) frame based on the weighting provided by the user defined blending ratio (0 = no information, 1 = all information). The blending ratio allows some of the hallucinatory content of the previous frame to be inherited from the previous frame, The Deep Dream algorithm is then applied to this merged frame, instead of Deep Dream starting from scratch for each frame. 
+The flow option enables the optical flow mode. This allows the optical flow of each frame to be calculated by comparing the difference in the movement of all pixels between the current and previous frame. The hallucinatory patterns on the area where the optical flow was detected is merged with the current (not-yet-hallucinatory) frame based on the weighting provided by the user defined blending ratio (0 = no information, 1 = all information). The blending ratio allows some of the hallucinatory content of the previous frame to be inherited from the previous frame, The Deep Dream algorithm is then applied to this merged frame, instead of Deep Dream starting from scratch for each frame. 
 
 1) The difference in optical flow is calculated between the previous and current frame (before the Deep Dream algorithm is applied). 
 2) The hallucinatory patterns within the area of high optical flow in the previous frame are shifted in the direction of the optical flow.
