@@ -5,6 +5,10 @@ The program is modified from [DeepDreamAnim](https://github.com/samim23/DeepDrea
 
 ![deepdreamvideoopticalflowsample](http://i.imgur.com/t2Qm2wx.gif)
 
+[Imgur](http://i.imgur.com/eYHcs1h.gifv)
+
+[Imgur](http://i.imgur.com/t2Qm2wx.gifv)
+
 ## Use Optical Flow to Adjust Deep Dream Video
 
 The flow option enables the optical flow mode. This allows the optical flow of each frame to be calculated by comparing the difference in the movement of all pixels between the current and previous frame. The hallucinatory patterns on the area where the optical flow was detected is merged with the current (not-yet-hallucinatory) frame based on the weighting provided by the user defined blending ratio (0 = no information, 1 = all information). The blending ratio allows some of the hallucinatory content of the previous frame to be inherited from the previous frame, The Deep Dream algorithm is then applied to this merged frame, instead of Deep Dream starting from scratch for each frame. 
