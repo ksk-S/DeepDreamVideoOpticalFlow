@@ -3,7 +3,7 @@
 This program is to make a video based on [Deep Dream](https://github.com/google/deepdream).
 The program is modified from [DeepDreamAnim](https://github.com/samim23/DeepDreamAnim) and [DeepDreamVideo](https://github.com/graphific/DeepDreamVideo) with additional functions for bleding two frames based on the optical flows. It also supports the image division to apply the Deep Dream algorithm to a large image.
 
-![deepdreamvideoopticalflowsample](http://i.imgur.com/eYHcs1h.gif)
+![deepdreamvideoopticalflowsample](http://i.imgur.com/T9xD5L5.gif)
 
 ## Use Optical Flow to Adjust Deep Dream Video
 
