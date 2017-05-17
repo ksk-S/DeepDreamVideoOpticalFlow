@@ -36,8 +36,8 @@ In that case, the image division will not be applied to the earlier stage of the
                        [-j JITTER] [-z ZOOM] [-s STEPSIZE]
                        [-l LAYERS [LAYERS ...]] [-v VERBOSE]
                        [-g GUIDE_IMAGE] [-flow FLOW] [-flowthresh FLOWTHREASH]
-		       [-bm BLEND_FLOW] [-bs BLEND_STATIC] [-d DEVIDE_MODE]
-		       [-mw MAX_WIDTH] [-mh MAX_HEIGHT]
+                       [-bm BLEND_FLOW] [-bs BLEND_STATIC] [-d DEVIDE_MODE]
+                       [-mw MAX_WIDTH] [-mh MAX_HEIGHT]
 </pre>       
 
 ## Original Arguments:
