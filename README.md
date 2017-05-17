@@ -30,16 +30,17 @@ The divided image is processed by Deep Dream individually and then merged into o
 If using octavescale in the original deep dream algorithm, the image is processed in a smaller size in the begining.
 In that case, the image division will not be applied to the earlier stage of the itterations (before enlarging the original size).
 
+# Usage
 
 # Original Options:
 
-  -h, --help            show this help message and exit
-  -i INPUT, --input INPUT
+ -h, --help            show this help message and exit
+ -i INPUT, --input INPUT
                         Input directory where extracted frames are stored
-  -o OUTPUT, --output OUTPUT
+ -o OUTPUT, --output OUTPUT
                         Output directory where processed frames are to be
                         stored
-  -it IMAGE_TYPE, --image_type IMAGE_TYPE
+ -it IMAGE_TYPE, --image_type IMAGE_TYPE
                         Specify whether jpg or png
   --gpu GPU             Switch for gpu computation.
   -t MODEL_PATH, --model_path MODEL_PATH
@@ -99,11 +100,11 @@ In that case, the image division will not be applied to the earlier stage of the
 
 # Examples
 
-1-extract.bat
+- 1-extract.bat
 `python dreamer.py -e 1 --input RHI-20Sec.mov --output Input
 
-2-dream.bat
+- 2-dream.bat
 `python dreamer.py --input Input --output Output --octaves 3 --octavescale 1.8 --iterations 16 --jitter 32 --zoom 1 --stepsize 1.5 --flow 1 --flowthresh 6 --blendflow 0.9 --blendstatic 0.1 --layers inception_4d/pool --gpu 1 -d 2 -mw 1500
 
-3-create.bat
+- 3-create.bat
 `python dreamer.py -c 1 --input Output --output Video.mp4
