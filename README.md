@@ -30,15 +30,25 @@ In that case, the image division will not be applied to the earlier stage of the
 
 # Usage
 
-## Original Options:
+<pre>usage: dreamer.py [-h] -i INPUT -o OUTPUT -it IMAGE_TYPE [--gpu GPU]
+                       [-t MODEL_PATH] [-m MODEL_NAME] [-p PREVIEW]
+                       [-oct OCTAVES] [-octs OCTAVESCALE] [-itr ITERATIONS]
+                       [-j JITTER] [-z ZOOM] [-s STEPSIZE]
+                       [-l LAYERS [LAYERS ...]] [-v VERBOSE]
+                       [-g GUIDE_IMAGE] [-flow FLOW] [-flowthresh FLOWTHREASH]
+		       [-bm BLEND_FLOW] [-bs BLEND_STATIC] [-d DEVIDE_MODE]
+		       [-mw MAX_WIDTH] [-mh MAX_HEIGHT]
+</pre>       
+
+## Original Arguments:
 <pre>
- -h, --help            show this help message and exit
- -i INPUT, --input INPUT
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
                         Input directory where extracted frames are stored
- -o OUTPUT, --output OUTPUT
+  -o OUTPUT, --output OUTPUT
                         Output directory where processed frames are to be
                         stored
- -it IMAGE_TYPE, --image_type IMAGE_TYPE
+  -it IMAGE_TYPE, --image_type IMAGE_TYPE
                         Specify whether jpg or png
   --gpu GPU             Switch for gpu computation.
   -t MODEL_PATH, --model_path MODEL_PATH
@@ -58,27 +68,25 @@ In that case, the image division will not be applied to the earlier stage of the
   -z ZOOM, --zoom ZOOM  Zoom in Amount. Default: 1
   -s STEPSIZE, --stepsize STEPSIZE
                         Step Size. Default: 1.5
-  -b BLEND, --blend BLEND
-                        Blend Amount. Default: "0.5" (constant), or "loop"
-                        (0.5-1.0), or "random"
   -l LAYERS [LAYERS ...], --layers LAYERS [LAYERS ...]
                         Array of Layers to loop through. Default: [customloop]
                         - or choose ie [inception_4c/output] for that single
                         layer
   -v VERBOSE, --verbose VERBOSE
                         verbosity [0-3]
+  -g, --guide GUIDE_IMAGE
+			A guide image
 </pre>
-## Additional Options:
+## Additional Arguments:
 <pre>
    -flow, --flow	Optical Flow is taken into accout
-   -flowthresh, --flowthresh
+   -flowthresh FLOWTHREASH, --flowthresh FLOWTHREASH
 			Threshold for detecting a flow
    -bm BLEND_FLOW, --blendflow BLEND_FLOW
 			blend ratio for flowing part
    -bs BLEND_STATIC, --blendstatic BLEND_STATIC
 			blend ratio for static part
-   -g, --guide GUIDE_IMAGE
-			A guide image
+
    -d [0-2] --divide [0-2]
 			dividing image into sub images [0:disable 1:dividing to maxWidth, maxHeight 2:dividing half if width exceeds maxWidth]
    -mw MAX_WIDTH, --maxWidth MAX_WIDTH
