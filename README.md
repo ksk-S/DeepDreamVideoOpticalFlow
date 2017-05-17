@@ -1,12 +1,7 @@
 # DeepDreamVideoOpticalFlow
 
-Making a video based on [Deep Dream](https://github.com/google/deepdream).
-[DeepDreamAnim](https://github.com/samim23/DeepDreamAnim) and [Deepadsfadf
-
-This tool helps to create animations with [deepdream](https://github.com/google/deepdream).
-Extract frames from videos, process them with deepdream and then output as new video file.
-Frame blending option is provided, to ensure "stable" dreams across frames.
-A preview function make rapid iterations possible. Optionally guided dreaming & optical flow can be used.
+This program is to make a video based on [Deep Dream](https://github.com/google/deepdream).
+The program is modified from [DeepDreamAnim](https://github.com/samim23/DeepDreamAnim) and [DeepDreamVideo](https://github.com/graphific/DeepDreamVideo) with additional functions for bleding two frames based on the optical flows. It also supports the image division to apply the Deep Dream algorithm to a large image.
 
 
 
