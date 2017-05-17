@@ -2,18 +2,13 @@
 
 # Use Optical Flow to Adjust Deep Dream Video
 
--The flow option enables the optical flow mode. This allows the optical flow of each frame to be calculated by comparing the difference in the movement of all pixels between the current and previous frame. 
-The hallucinatory patterns on the area where the optical flow was detected is merged with the current (not-yet-hallucinatory) frame based on the weighting provided by the user defined blending ratio 
-(0 = no information, 1 = all information). The blending ratio allows some of the hallucinatory content of the previous frame to be inherited from the previous frame, The Deep Dream algorithm is then applied to this merged frame, 
-instead of Deep Dream starting from scratch for each frame. 
+he flow option enables the optical flow mode. This allows the optical flow of each frame to be calculated by comparing the difference in the movement of all pixels between the current and previous frame. The hallucinatory patterns on the area where the optical flow was detected is merged with the current (not-yet-hallucinatory) frame based on the weighting provided by the user defined blending ratio (0 = no information, 1 = all information). The blending ratio allows some of the hallucinatory content of the previous frame to be inherited from the previous frame, The Deep Dream algorithm is then applied to this merged frame, instead of Deep Dream starting from scratch for each frame. 
 
 1) The difference in optical flow is calculated between the previous and current frame (before the Deep Dream algorithm is applied). 
 2) The hallucinatory patterns within the area of high optical flow in the previous frame are shifted in the direction of the optical flow.
 3) This hallucinatory pattern from the previous frame is merged into the current (not-yet-hallucinatory) frame with a specfied blending ratio. 
  
-The blending ratio on the optical flow area and the other areas (background) can be specified separately by using -bm and -bs options.
-The range of the blending ratio is between 0 and 1. A blending ratio of 1 means that the current frame inherits 100% of the hallucinatory content from the previous frame, and then the deep dream algorithm is applied.
-A blending ratio of 0 means the previous frame is dicarded, therefore the deep dream algorithm is applied from the scrach. 
+The blending ratio on the optical flow area and the other areas (background) can be specified separately by using -bm and -bs options. The range of the blending ratio is between 0 and 1. A blending ratio of 1 means that the current frame inherits 100% of the hallucinatory content from the previous frame, and then the deep dream algorithm is applied. A blending ratio of 0 means the previous frame is dicarded, therefore the deep dream algorithm is applied from the scrach. 
 
 
 # Dividing the Image
@@ -104,12 +99,12 @@ In that case, the image division will not be applied to the earlier stage of the
 # Examples
  1-extract.bat:
  
-`python dreamer.py -e 1 --input RHI-20Sec.mov --output Input'
+`python dreamer.py -e 1 --input RHI-20Sec.mov --output Input`
 
  2-dream.bat:
 
-`python dreamer.py --input Input --output Output --octaves 3 --octavescale 1.8 --iterations 16 --jitter 32 --zoom 1 --stepsize 1.5 --flow 1 --flowthresh 6 --blendflow 0.9 --blendstatic 0.1 --layers inception_4d/pool --gpu 1 -d 2 -mw 1500'
+`python dreamer.py --input Input --output Output --octaves 3 --octavescale 1.8 --iterations 16 --jitter 32 --zoom 1 --stepsize 1.5 --flow 1 --flowthresh 6 --blendflow 0.9 --blendstatic 0.1 --layers inception_4d/pool --gpu 1 -d 2 -mw 1500`
 
  3-create.bat:
 
-`python dreamer.py -c 1 --input Output --output Video.mp4'
+`python dreamer.py -c 1 --input Output --output Video.mp4`
